@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>shaapes // Background Image Generator by @wwnjp</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale = 1.0" />
+
+	<link rel="stylesheet" media="screen" type="text/css" href="css/typicons/typicons.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/shaapes.css" />
+</head>
+<body>
+
+	<div class="img-container" id="btn--refresh"></div>
+
+	<div class="main-container color-adjust black">
+		<div class="inner-container boxy">
+		<header class="logo-wrapper">
+			<h1 href="#" class="logo dock-btn" id="btn--about">Shaapes</h1>
+			<h2>by: <a href="http://twitter.com/wwnjp" title="@wwnjp on Twitter">Josh Drumm</a></h2>
+		</header>
+		<nav>
+		<a href="#" class="dock-btn boxy typcn typcn-grid" title="Shapes" id="btn--shapes">Shapes</a>
+		<a href="#" class="dock-btn boxy" title="Colors" id="btn--colors">Colors</a>
+		<a href="#" class="dock-btn boxy" title="Advanced" id="btn--advanced">Advanced</a>
+		</nav>
+
+
+	<form id="alltheshapesthatsshapelyshape" method="post" action="#">
+
+	<fieldset id="shaapes--shapes" class="block-wrapper hide">
+		<legend>Shapes</legend>
+		<div class="grid-100">
+		<div class="input-wrapper">
+			<div class="boxy" id="shape-button-area"></div>
+		</div>
+		</div>
+
+		<div class="grid-100">
+		<div class="input-wrapper">
+			<label for="shapesize">Size</label>
+			<input type="range" id="shapesize" name="shapesize" min="40" max="500" step="5" value="128">
+		</div>
+		<div class="input-wrapper">
+			<label for="isrotate">Rotation</label>
+			<select id="rotate" name="rotate">
+				<option value="none" selected="selected">None</option>
+				<option value="leftright">Left-Right</option>
+				<option value="deg30">30&deg;</option>
+				<option value="deg45">45&deg;</option>
+				<option value="deg60">60&deg;</option>
+				<option value="deg90">90&deg;</option>
+				<option value="deg120">120&deg;</option>
+				<option value="deg180">180&deg;</option>
+				<option value="full">Full</option>
+			</select>
+		</div>
+		<div class="input-wrapper">
+			<label for="distribution">Distribution</label>
+			<select name="distribution" id="distribution">
+				<option value="even">Grid</option>
+				<option value="alternate">Alternate</option>
+				<!-- <option value="center">Center Weighted</option> -->
+				<!-- <option value="topleft">Top Left Weighted</option> -->
+				<!-- <option value="kaleidoscope">Kaleidoscope</option> -->
+				<option value="spiral">Spiral</option>
+			</select>
+		</div>
+		</div>
+
+
+	</fieldset>
+
+	<fieldset id="shaapes--colors" class="block-wrapper hide">
+		<legend>Color</legend>
+
+		<div class="grid-100">
+		<div class="input-wrapper hide">
+			<label for="">Palette</label>
+			<div id="color-sel-area"><input type="text" class="color-sel" style="background-color: rgb(68, 68, 68);"><input type="text" class="color-sel" style="background-color: rgb(243, 243, 243);"></div>
+			<a href="http://wwnjp.com/shaapes/#" class="color-sel-a" id="add-color-sel">Add</a>
+			<a href="http://wwnjp.com/shaapes/#" class="color-sel-a" id="reset-color-sel">Reset</a><br class="clr">
+		</div>
+		<div class="input-wrapper">
+			<label for="trans">Transparency</label>
+			<input type="range" id="trans" name="trans" min="0" max="1" step="0.05" value="0.5" />
+		</div>
+		<div class="input-wrapper">
+			<label for="variance">Variance</label>
+			<input type="range" id="variance" name="variance" min="0" max="100" step="1" value="10" />
+		</div>
+		</div>
+
+		<div class="grid-100">
+		<div class="input-wrapper">
+			<label for="cl-search">Find a Color Scheme</label>
+			<input type="text" class="fw" id="cl-search" name="cl-search" placeholder="mood, season, anything!">
+			<button id="cl-submit" class="cl-button">Search</button>
+		</div>
+		<div id="cl-results" class="cl-results-wrapper hide"></div>
+
+		</div>
+
+	</fieldset>
+
+	<fieldset id="shaapes--advanced" class="block-wrapper hide">
+	<legend>Screen</legend>
+	<div class="input-wrapper">
+		<label for="docw">Dimensions</label>
+		<input class="small" type="number" id="docw" name="docw" value="2048">
+		<span class="fl">x</span>
+		<input class="small" type="number" id="doch" name="doch" value="2048">
+	</div>
+	<div class="input-wrapper">
+		<label for="output-format">Output Format</label>
+		<select id="output-format" name="output-format">
+			<option value="image/jpeg">JPG</option>
+			<option value="image/png">PNG</option>
+		</select>
+	</div>
+	<div class="input-wrapper">
+		<label for="space">Closeness</label>
+		<input type="range" id="space" name="space" min="0.5" max="4" step=".25" value="1" />
+	</div>
+	<div class="input-wrapper">
+		<label for="distance">Weight</label>
+		<input type="range" id="distance" name="distance" min="0.5" max="5" step=".01" value="1" />
+	</div>
+	<div class="input-wrapper">
+		<label for="numshapes">Number of Shapes</label>
+		<input type="range" id="numshapes" name="numshapes" min="1" max="10000" step="10" value="500">
+	</div>
+	<div class="input-wrapper">
+		<label for="sizerand">Size Variance</label>
+		<input type="range" id="sizerand" name="sizerand" min="1" max="5" step="1" value="1" />
+	</div>
+	</fieldset>
+
+	</form>
+
+
+
+		</div>
+
+
+	</div>
+
+
+	<section id="shaapes--download" class="white popup hide">
+		<div class="popup-wrapper">
+		<h2>Download</h2>
+		<p>Save this background by right clicking or long pressing the image below.</p>
+		<img id="omgimgdl" src="">
+		<a href="#" id="share-url" class="boxy">Use this link to Share with Friends!</a>
+		</div>
+
+		<a href="#" id="shaapes--download-close" class="btn-close" title="Close">Close <span class="typcn typcn-times"></span></a>
+	</section>
+
+
+	<section id="shaapes--about" class="popup hide">
+		<div class="popup-wrapper">
+		<h2>Shaapes - A Javascript Background Generator</h2>
+		<h3>by Josh Drumm (<a href="http://twitter.com/wwnjp">@wwnjp</a>)</h3>
+		<p>This is a small web application for the purpose of generating images of repeating
+		geometric shapes in various color palettes. This was specifically designed so I could
+		create minimal hi-res background images. This is an entirely Javascript/jQuery-based
+		application with no backend processor at all. This app uses canvas to generate all of the
+		images.</p>
+		<p>Once you tweak the parameters and find an image that you like, you can click the "Download"
+		button, which will let you save it to your device.</p>
+
+		<h3>Special Thanks</h3>
+		<p>This project uses the <a href="http://jquery.com/">jQuery</a> Javascript library.</p>
+		<p>The icons are from <a href="http://typicons.com/">Typicons</a></p>
+		<p>It also uses the public API provided by <a href="http://colourlovers.com/">ColourLovers.com</a>, who store a collection of amazing colo(u)r palettes.</p>
+
+		<h3>Mild Legal Information</h3>
+		<p class="small">This has been made for anyone to use, free of charge. All code included outside of external libraries have been written 100% by me unless otherwise noted. Creation of any images by this program can be used for any purpose, public or private. If you find this enjoyable or useful, <a href="http://twitter.com/wwnjp">send me a message</a>!</p>
+		</div>
+
+		<a href="#" id="shaapes--about-close" class="btn-close" title="Close">Close <span class="typcn typcn-times"></span></a>
+	</section>
+
+
+
+	<footer class="color-adjust black">
+		<div class="hint invisible hide animate">Click anywhere to refresh the image.</div>
+		<a href="#" class="boxy animate" title="Download" id="btn--download">Download <span class="typcn typcn-download"></span></a>
+	</footer>
+
+
+
+
+
+
+	<!-- Add the scripts needed to the page and begin execution -->
+	<script type="text/javascript" src="js/jquery-1.9.0.min.js"></script>
+	<script type="text/javascript" src="js/shaapes.js"></script>
+</body>
+</html>
